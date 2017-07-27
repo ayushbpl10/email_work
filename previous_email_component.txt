@@ -28,10 +28,10 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
   public options: Object = {
     charCounterCount: true,
-    toolbarButtons: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html','insertLink'],
-    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html','insertLink'],
-    toolbarButtonsSM: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html','insertLink'],
-    toolbarButtonsMD: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html','insertLink'],
+    toolbarButtons: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html'],
+    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html'],
+    toolbarButtonsSM: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html'],
+    toolbarButtonsMD: ['bold', 'italic', 'underline', 'paragraphFormat','Smarty Tags','html'],
     heightMin: 100,
     heightMax: 150
   };
@@ -815,9 +815,9 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     el.css("background-color",this.backgroundcolor);
   }
 
-  // onReadyEditor(event:any){
-  //
-  // }
+  onReadyEditor(event:any){
+
+  }
 
   onImageUpload(){
 
@@ -1528,7 +1528,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       }
 
       jQuery(el).find("[data-initial='true']").remove();
-      jQuery(el).removeClass("col-sm-6 justify-content-center");
+      jQuery(el).removeClass("row justify-content-center");
 
       //let editoptions = jQuery('.hover-btn').first().clone();
       //jQuery(el).find("[data-initial='false']").append(editoptions);
