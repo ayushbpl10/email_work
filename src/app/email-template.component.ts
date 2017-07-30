@@ -111,15 +111,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
     console.log("preview");
     let template = jQuery("#email").parent().html();
-    //jQuery(templateClone).find(".hoverable").removeClass("hoverable");
-    //jQuery(templateClone).find('.hover-btn').remove();
 
-    //let template = jQuery(templateClone).html();
-
-    // jQuery("#EmailPreviewModal").find("#desktopPreview").html(template);
-    // jQuery('#EmailPreviewModal').find("#email").removeAttr("id");
-    // jQuery('#EmailPreviewModal').find(".hoverable").removeClass("hoverable");
-    // jQuery('#EmailPreviewModal').find('.hover-btn').remove();
     let desktop = jQuery("#desktopPreview");
 
     desktop.attr("srcdoc",template);
@@ -146,7 +138,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
 
   Save(){
-
+    jQuery("#destination").find("a").removeAttr('disabled');
     jQuery('#destination').find('.hover-btn').remove();
     let template = jQuery("#email").parent().html();
     this.TemplateSave.emit(template);
@@ -336,13 +328,14 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       el.css('width','100%');
 
       el.siblings().remove();
-      console.log();
-      let id = el.closest('.item').attr('id');
+      console.log("here in image click");
+      let id = el.closest('.item').attr('data-module');
       if(id =='image_text_item' || id=='text_image_item'){
         jQuery('#preview_image_text').find('img').attr('src',src);
       }
       else if(id=='image_item'){
         jQuery('#preview_image').find('img').attr('src',src);
+        console.log("image item")
       }
 
     }
@@ -451,23 +444,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
           el.css('width',event);
           el.parent().attr('data-size',event);
           break;
-        // case 'actualwithimage':
-        //   let parentwidth= el.parent().width();
-        //
-        //   var image = new Image();
-        //   image.src = el.attr("src");
-        //
-        //   let width =  image.naturalWidth;
-        //
-        //   if(width<parentwidth){
-        //     el.css('max-width',el.parent().width());
-        //     el.css('width','auto');
-        //   }else{
-        //     el.css('width','100%');
-        //   }
-        //   el.parent().attr('data-size','actualwithimage');
-        //
-        //   break;
+
       }
 
     }
@@ -485,24 +462,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
           el.css('width',event);
           el.parent().attr('data-size',event);
           break;
-        // case 'actualwithimage':
-        //
-        //   let parentwidth= el.parent().width();
-        //
-        //   var image = new Image();
-        //   image.src = el.attr("src");
-        //
-        //   let width =  image.naturalWidth;
-        //
-        //   if(width<parentwidth){
-        //     el.css('max-width',el.parent().width());
-        //     el.css('width','auto');
-        //   }else{
-        //     el.css('width','100%');
-        //   }
-        //   el.parent().attr('data-size','actualwithimage');
-        //
-        //   break;
+
       }
 
     }
@@ -510,46 +470,12 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
       let el = jQuery(self.element).find('img');
       switch(event){
-        // case 'actual':
-        //   let parentwidthalone =  el.closest("[data-align]").width();
-        //
-        //   var image = new Image();
-        //   image.src = el.attr("src");
-        //
-        //   let widthalone =  image.naturalWidth;
-        //
-        //   if(widthalone<parentwidthalone){
-        //     el.css('width',widthalone);
-        //   }else{
-        //     el.css('width','100%');
-        //   }
-        //
-        //   el.closest("[data-align]").attr('data-size','actual');
-        //   break;
 
         case 'fit':
           el.css('width','100%');
           el.closest("[data-align]").attr('data-size','fit');
           break;
-        // case 'actualwithtext':
-        //
-        //   let parentwidth=  el.closest("[data-align]").width();
-        //
-        //   var image = new Image();
-        //   image.src = el.attr("src");
-        //
-        //   let width =  image.naturalWidth;
-        //   console.log(parentwidth+" : parent "+width+" : Width img")
-        //   if(width<parentwidth){
-        //
-        //     el.css('width',width);
-        //
-        //   }else{
-        //     el.css('width','100%');
-        //
-        //   }
-        //   el.closest("[data-align]").attr('data-size','actualwithtext');
-        //   break;
+
         default:
           el.css('width',event);
           el.closest("[data-align]").attr('data-size',event);
@@ -568,20 +494,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     console.log(event,self.imgFrom);
     if(self.imgFrom=='left'){
       let el=jQuery(self.element).find("img[data-from='left']").parent();
-      // switch(event){
-      //   case '25':
-      //     el.css('width','25%');
-      //     el.siblings().css('width','75%');
-      //     break;
-      //   case '50':
-      //     el.css('width','50%');
-      //     el.siblings().css('width','50%');
-      //     break;
-      //   case '75':
-      //     el.css('width','75%');
-      //     el.siblings().css('width','25%');
-      //     break;
-      // }
+
       let width = event+"%";
       let siblingwidth = (100 - parseInt(event)).toString()+"%";
       el.css('width',width);
@@ -592,20 +505,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     }
     else if(self.imgFrom=='right'){
       let el = jQuery(self.element).find("img[data-from='right']").parent();
-      // switch(event){
-      //   case '25':
-      //     el.css('width','25%');
-      //     el.siblings().css('width','75%');
-      //     break;
-      //   case '50':
-      //     el.css('width','50%');
-      //     el.siblings().css('width','50%');
-      //     break;
-      //   case '75':
-      //     el.css('width','75%');
-      //     el.siblings().css('width','25%');
-      //     break;
-      // }
+
       let width = event+"%";
       let siblingwidth = (100 - parseInt(event)).toString()+"%";
       el.css('width',width);
@@ -615,23 +515,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     }
     else{
       let el =jQuery(self.element).find('img').parent();
-      // switch(event){
-      //   case '25':
-      //     el.css('width','25%');
-      //     el.siblings().css('width','75%');
-      //
-      //     break;
-      //   case '50':
-      //     el.css('width','50%');
-      //     el.siblings().css('width','50%');
-      //
-      //     break;
-      //   case '75':
-      //     el.css('width','75%');
-      //     el.siblings().css('width','25%');
-      //
-      //     break;
-      // }
+
       let width = event+"%";
       let siblingwidth = (100 - parseInt(event)).toString()+"%";
       el.css('width',width);
@@ -665,9 +549,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     console.log(event)
     jQuery(this.element.children).find('a').attr('data-link',event);
     let href = jQuery(this.element.children).find('a').attr('href');
-    // if(this.linkTo =='web' && (href.search("subject") > -1)){
-    //   jQuery(this.element.children).find('a').attr('href',this.webAdd);
-    // }
+
     if(this.linkTo =='email' && (href.search("subject") == -1)){
       jQuery(this.element.children).find('a').attr('href','mailto:?subject=&body=');
     }
@@ -728,17 +610,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       }
 
     }
-    // if(change.TemplateEmail){
-    //
-    //   if(change.TemplateEmail.currentValue == ""){
-    //
-    //   } else {
-    //     jQuery("#email").html(this.TemplateEmail);
-    //     let editoptions = jQuery('.hover-btn').first().clone(false);
-    //     jQuery("[data-initial='false']").append(editoptions);
-    //   }
-    //
-    // }
+
   }
 
   BackgroundColorChange(event:any){
@@ -815,9 +687,6 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     el.css("background-color",this.backgroundcolor);
   }
 
-  // onReadyEditor(event:any){
-  //
-  // }
 
   onImageUpload(){
 
@@ -860,6 +729,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
   TestEmails(){
     console.log(jQuery("#select-to").val());
     this.EmailArray = jQuery("#select-to").val();
+    jQuery("#destination").find("a").removeAttr('disabled');
     jQuery('#email').find('.hover-btn').remove();
     let template = jQuery("#email").parent().html();
     this.TemplateWithEmail.emit({ email : this.EmailArray, Html : template});
@@ -886,39 +756,14 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     setTimeout(()=>{
       console.log(jQuery(event.target).parent().children('color-picker').find('.color-picker'));
       let el = jQuery(event.target).parent().children('color-picker').find('.color-picker');
-      el.css('position', 'absolute');
-      el.css('top', '10px');
+      el.find(".arrow").hide();
+      el.css('position', 'fixed');
+      el.css('top', '150px');
       el.css('left', '-230px');
-      el.css('z-index', '9999');
+      el.css('z-index', '1');
     },0);
 
   }
-  // anniversary(){
-  //
-  //   this.anniversary_category = true;
-  //   this.birthday_category = false;
-  //   this.christmas_category = false;
-  //
-  //
-  // }
-  //
-  // birthday(){
-  //   this.anniversary_category = false;
-  //   this.birthday_category = true;
-  //   this.christmas_category = false;
-  //
-  // }
-  //
-  // christmas(){
-  //
-  //   this.anniversary_category = false;
-  //   this.birthday_category = false;
-  //   this.christmas_category = true;
-  //
-  // }
-
-
-
 
   SelectCategory(event: any){
     console.log(event);
@@ -1128,11 +973,6 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
         }
 
 
-        // self.changeDetectorRef.detectChanges();
-        // jQuery(".fr-wrapper").css("max-height","200px");
-        // jQuery(".fr-wrapper").css("overflow-y","scroll");
-
-
       }
 
 
@@ -1161,9 +1001,15 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
 
         self.element = el;
+
         self.backgroundcolor = jQuery(el).children().css('background-color');
 
         self.changeDetectorRef.detectChanges();
+
+        // jQuery(el).find("a.anchorimg").click(function(e: any) {
+        //   e.preventDefault();
+        //   return false;
+        // });
         let src  = jQuery(el).find("img[data-from='one']").attr('src');
         jQuery('#preview_image').find('img').attr('src',src);
         let imgPos = jQuery(el).find("img[data-from='one']").closest("div[data-align]").attr('data-align');
@@ -1204,6 +1050,12 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
 
         self.element = el;
+
+        jQuery(el).find("a.anchorbtn").click(function(e: any) {
+          e.preventDefault();
+          return false;
+        });
+
         let ele = jQuery(el).children();
         self.backgroundcolor = ele.css("background-color");
         self.btnbackgroundcolor = ele.find('a button').css("background-color");
@@ -1295,9 +1147,6 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
         self.imgFrom = 'withtext';
 
-        // self.changeDetectorRef.detectChanges();
-        // jQuery(".fr-wrapper").css("max-height","200px");
-        // jQuery(".fr-wrapper").css("overflow-y","scroll");
 
       }
 
@@ -1421,37 +1270,37 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
     jQuery("#destination").find("[data-module]").addClass("indestination");
 
-    jQuery("[data-module='text_item']").on("click", function(event:any){
+    jQuery("[data-module='text_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           TextItem(this,event);
 
     });
 
-    jQuery("[data-module='image_item']").on("click", function(event:any){
+    jQuery("[data-module='image_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           ImageItem(this,event);
 
     });
 
-    jQuery("[data-module='button_item']").on("click", function(event:any){
+    jQuery("[data-module='button_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           ButtonItem(this,event);
 
     });
 
-    jQuery("[data-module='image_text_item']").on("click", function(event:any){
+    jQuery("[data-module='image_text_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           ImageTextItem(this,event);
 
     });
 
-    jQuery("[data-module='text_image_item']").on("click", function(event:any){
+    jQuery("[data-module='text_image_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           ImageTextItem(this,event);
 
     });
 
-    jQuery("[data-module='image_image_item']").on("click", function(event:any){
+    jQuery("[data-module='image_image_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           ImageImageItem(this,event);
 
@@ -1459,27 +1308,9 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
 
     console.log(jQuery("#destination").find("[data-module='discount_item']").length);
 
-    // if(jQuery("#destination").find("[data-module='discount_item']").length == 1){
-    //
-    //   for(let discount of  self.DiscountArray){
-    //
-    //     if(discount.id == self.DiscountSelectedId){
-    //       console.log(self.DiscountSelectedId)
-    //
-    //       self.showdiscountcoupon = true;
-    //
-    //       self.changeDetectorRef.detectChanges();
-    //
-    //       self.onAttachCoupon(discount);
-    //
-    //
-    //
-    //     }
-    //   }
-    //
-    // }
 
-    jQuery("#destination").find("[data-module='discount_item']").on("click", function(event:any){
+
+    jQuery("#destination").find("[data-module='discount_item']:not(:has([data-initial='true']))").on("click", function(event:any){
 
           DiscountItem(this,event);
 
@@ -1515,14 +1346,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       jQuery(el).find("[data-initial='false']").show();
 
 
-      // if(jQuery(el).find("[data-initial='true']").length==0){
-      //
-      // }
-      // else{
-      //   jQuery(el.children).hover(function(){
-      //     jQuery(this).toggleClass("item_hover")
-      //   });
-      // }
+
       if(jQuery(el).find("[data-coupon='false']").length>0){
         jQuery(el).find("[data-coupon='true']").hide();
       }
@@ -1530,8 +1354,7 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       jQuery(el).find("[data-initial='true']").remove();
       jQuery(el).removeClass("col-sm-6 justify-content-center");
 
-      //let editoptions = jQuery('.hover-btn').first().clone();
-      //jQuery(el).find("[data-initial='false']").append(editoptions);
+
       if(jQuery(el).hasClass("indestination")){
         console.log("returned");
         return;
@@ -1666,13 +1489,6 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     let iframe = jQuery("#frame_1");
 
 
-    /*View*/
-    function updateView(view: any) {
-      if (view) {
-        phone.className = "phone view_" + view;
-      }
-    }
-
     /*Controls*/
     function updateIframe() {
 
@@ -1680,11 +1496,9 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       jQuery(phone).css("width","375px");
       jQuery(phone).css("height","667px");
 
-      /*Idea by /u/aerosole*/
+
       jQuery("#wrapper").css("perspective",jQuery("#iframePerspective").checked ? "1300px" : "none");
-        //= (
-        //
-      //);
+
 
     }
 
@@ -1695,17 +1509,6 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
     jQuery( "#controls" ).on( "change", function() {
       updateIframe();
     });
-    // jQuery("#controls").addEventListener("change", function() {
-    //   updateIframe();
-    // });
-    jQuery( "#views" ).on( "click", function(evt: any) {
-      updateView(evt.target.value);
-    });
-
-    // jQuery("#views").addEventListener("click", function(evt: any) {
-    //   updateView(evt.target.value);
-    // });
-
 
     jQuery( "#phones" ).on( "click", function(evt: any) {
       let width;
@@ -1745,72 +1548,21 @@ export class EmailTemplateComponent implements AfterViewInit,OnInit,OnChanges,On
       jQuery(phone).css("height",height + "px");
 
     });
-    // jQuery("#phones").addEventListener("click", function(evt: any) {
-    //
-    //   let width;
-    //   let height;
-    //
-    //   if(evt.target.value == 1){
-    //     // iphone 6
-    //     width = 375;
-    //     height = 667;
-    //   }
-    //
-    //   if(evt.target.value == 2){
-    //     // samsung
-    //     width = 400;
-    //     height = 640;
-    //   }
-    //
-    //   if(evt.target.value == 3){
-    //     // microsoft
-    //     width = 320;
-    //     height = 480;
-    //   }
-    //
-    //   if(evt.target.value == 4){
-    //     // htc
-    //     width = 360;
-    //     height = 640;
-    //   }
-    //
-    //   if(evt.target.value == 5){
-    //     // ipad mini
-    //     width = 768;
-    //     height = 1024;
-    //   }
-    //
-    //   phone.style.width = width + "px";
-    //   phone.style.height = height + "px";
-    //
-    // });
 
 
-    if (iframe.attachEvent){
-      // iframe.attachEvent("onload", function(){
-      //   afterLoading();
-      // });
+
       jQuery(iframe).on("onload",function () {
         afterLoading();
       })
-    } else {
-      jQuery(iframe).on("onload",function () {
-        afterLoading();
-      })
-      // iframe.onload = function(){
-      //   afterLoading();
-      // };
-    }
+
+
 
     function afterLoading(){
 
       setTimeout(function() {
-        //phone.className = "phone view_1";
+
         jQuery(phone).addClass("phone view_1");
-        // setTimeout(function() {
-        //   // do second thing
-        //   phone.className = "phone view_1 rotate";
-        // }, 1000);
+
       }, 1000);
 
     }

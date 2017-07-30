@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color: lightgray">
+<div  class="container-fluid" style="background-color: lightgray">
   <div class="row">
     <div class="text-center col-sm-6 offset-sm-2" >
       <div class="btn btn-info my-1" (click)="Save()" >Save</div>
@@ -12,7 +12,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="EmailPreviewModal" tabindex="-1" role="dialog" aria-labelledby="previewModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fluid modal-notify modal-info" role="document">
+        <div class="modal-dialog modal-fluid modal-notify modal-info" style="-webkit-transform: translate(0,0); -ms-transform: translate(0,0);transform: translate(0,0);" role="document">
           <!--Content-->
           <div class="modal-content">
             <!--Header-->
@@ -96,7 +96,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="TestEmail" tabindex="-1" role="dialog" aria-labelledby="TestEmailModal" aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-dialog modal-notify modal-info" style="-webkit-transform: translate(0,0); -ms-transform: translate(0,0);transform: translate(0,0);" role="document">
           <!--Content-->
           <div class="modal-content">
             <!--Header-->
@@ -154,17 +154,18 @@
           </div>
         </div>
         <div data-module="image_item" class="item col-sm-6 justify-content-center">
-          <div data-initial="true" class="item_image">
+          <div data-initial="true" class="item_image" >
             <div class="self-align-center"><img src="../../images/imageicon.png" class="hoverable"></div>
             <div class="text-center">Image</div>
           </div>
 
-          <div data-initial="false" class="item_element">
+          <div data-initial="false" class="item_element" style="position: relative;">
 
-            <div class="hoverable" style="text-align: center !important; max-width: 600px; " data-align="center" data-size="fit">
-              <a target="_blank" style="text-decoration: none; " class="anchorimg" href="http://">
-                <img src="../../images/imageicon.png" data-from="one">
-                <div>Click here to add image</div>
+            <div class="hoverable" style="text-align: center;" data-align="center" data-size="fit">
+              <a style="text-decoration: none;" class="anchorimg" href="http://" disabled='disabled'>
+                <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="one">
+                <br />
+                <span>Click here to add image</span>
               </a>
             </div>
 
@@ -175,13 +176,14 @@
             <div style="font-size: 12px;" class="self-align-center"><img style="cursor: pointer; width: 100%; height: 100%; margin: 0 0 0 0;" src="../../images/imageTXT.png" class="hoverable"></div>
             <div style="font-size: 12px;" class="text-center">Image-Text</div>
           </div>
-          <div data-initial="false" class="item_element hoverable" style="display: flex;">
+          <div data-initial="false" class="item_element hoverable" style="display: flex;position: relative;">
             <div style="width: 100%">
               <table style="width: 100%; table-layout: fixed; " cellpadding="0" cellspacing="0">
                 <tr>
                     <td class="itemimagearea " style=" width: 50%; text-align: center ; max-width: 100%; " data-type="image" data-align="center" data-size="fit">
-                      <img src="../../images/imageicon.png" data-from="one">
-                      <div>Click here to add image</div>
+                      <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="one">
+                      <br />
+                      <span>Click here to add image</span>
                     </td>
                     <td data-type="text" class="textitem itemtextarea" style="width: 50%; max-width: 50%; padding: 15px 10px; overflow: hidden; word-wrap: break-word;">Please type here...</td>
                 </tr>
@@ -195,14 +197,15 @@
             <div class="self-align-center"><img src="../../images/textIMGicon.png" class="hoverable"></div>
             <div class="text-center">Text-Image</div>
           </div>
-          <div data-initial="false" class="item_element textimagearea hoverable" style="display: flex;">
+          <div data-initial="false" class="item_element textimagearea hoverable" style="display: flex;position: relative;">
             <div style="width: 100%">
               <table style="width: 100%; table-layout: fixed; " cellpadding="0" cellspacing="0">
                 <tr>
                   <td data-type="text" class="textitem itemtextarea" style="width: 50%; padding: 15px;">Please type here...</td>
                   <td class="text-center itemimagearea" style="width: 50%; text-align: center; max-width: 100%; " data-type="image" data-align="center" data-size="fit">
-                    <img src="../../images/imageicon.png" data-from="one">
-                    <div>Click here to add image</div>
+                    <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="one">
+                    <br />
+                    <span>Click here to add image</span>
                   </td>
                 </tr>
               </table>
@@ -215,17 +218,19 @@
             <div class="self-align-center"><img src="../../images/image_image.png" class="hoverable"></div>
             <div class="text-center">Image-Image</div>
           </div>
-          <div data-initial="false" class="item_element textimagearea hoverable" style="display: flex;">
+          <div data-initial="false" class="item_element textimagearea hoverable" style="display: flex;position: relative;">
             <div style="width: 100%">
               <table style="width: 100%; table-layout: fixed; " cellspacing="0" cellpadding="0" >
                 <tr>
                     <td class="itemimagearea" style="width: 50%;text-align: center;" data-type="image" data-align="center" data-size="fit">
-                      <img src="../../images/imageicon.png" data-from="left">
-                      <div>Click here to add image</div>
+                      <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="left">
+                      <br />
+                      <span>Click here to add image</span>
                     </td>
                     <td class="itemimagearea" style="width: 50%; text-align: center; " data-type="image" data-align="center" data-size="fit">
-                      <img src="../../images/imageicon.png" data-from="right">
-                      <div>Click here to add image</div>
+                      <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="right">
+                      <br />
+                      <span>Click here to add image</span>
                     </td>
                 </tr>
               </table>
@@ -238,13 +243,13 @@
             <div class="self-align-center"><img src="../../images/texticon.png" class="hoverable"></div>
             <div class="text-center">Button</div>
           </div>
-          <div data-initial="false" class="item_element hoverable">
+          <div data-initial="false" class="item_element hoverable" style="position: relative;">
 
             <div style="text-align: center">
                 <table style="width: 100%; table-layout: fixed; " cellspacing="0" cellpadding="0" >
                   <tr>
                     <td>
-                      <a target="_blank" class="anchorbtn" style=" text-decoration: none; max-width: 100%; "  href="#" data-link="web"><button  class="hoverable" style="margin-bottom: 10px; margin-top: 10px; border-radius: 25px; max-width: 80%; word-wrap: break-word; background-color: whitesmoke; padding: 10px 15px;">Make your purchase</button></a>
+                      <a  class="anchorbtn" style=" text-decoration: none; max-width: 100%; "  href="#" data-link="web"><button  class="hoverable" style="margin-bottom: 10px; margin-top: 10px; border-radius: 25px; max-width: 80%; word-wrap: break-word; background-color: whitesmoke; padding: 10px 15px;">Make your purchase</button></a>
                     </td>
                   </tr>
                 </table>
@@ -257,19 +262,19 @@
             <div class="self-align-center"><img src="../../images/DiscountBTN.png" class="hoverable"></div>
             <div class="text-center">Discount</div>
           </div>
-          <div data-initial="false" class="item_element">
+          <div data-initial="false" class="item_element" style="position: relative;">
 
             <div class="hoverable">
               <div class="text-center" data-coupon="false">
                 <img src="../../images/discountsiconSelection.png" data-from="one">
                 <div>Click here to add a Discount Coupon</div>
               </div>
-              <table style="box-sizing: border-box; border-style: dotted; border-color: red; border-width: 1px;  width: 100%; table-layout: fixed; background-color: whitesmoke; color: black;" cellspacing="0" cellpadding="0" data-coupon="true">
-                <tr>
-                  <td style="text-align: center; width: 50%; padding: 10px 8px">
+              <table style="box-sizing: border-box; border-style: dotted; border-color: red; border-width: 1px;  width: 100%; table-layout: fixed; background-color: whitesmoke; color: black; " cellspacing="0" cellpadding="0" data-coupon="true">
+                <tr style="border: 2px solid transparent;">
+                  <td style="text-align: center; width: 50%; padding: 10px 8px; margin: 0;">
                     <img class="none" id="discountImg" src="../../images/discountsiconSelection.png" width="50%">
                   </td>
-                  <td style="width: 50%; padding: 10px 8px">
+                  <td style="width: 50%; padding: 10px 8px;">
                     <div style="padding: 5px 2px">
                       Werkt op Alle weekdagen van Juli 17, 2017 - Juli 24, 2017.
                     </div>
@@ -301,15 +306,15 @@
     </div>
     <div class="col-sm-6 mt-1" >
     <div id="email" style="margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
-      <table  cellpadding="0" cellspacing="0" style="margin:0;background:#fff;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%" border="0" >
+      <table  cellpadding="0" cellspacing="0" style="margin:0;background:transparent;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%" border="0" >
 
         <tr style="padding:0;text-align:left;vertical-align:top" >
           <td style="margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word" valign="top">
 
-            <table align="center" cellspacing="0" cellpadding="0" width="100%" style="margin:0 auto;background:#fefefe;background-color:#f0f4f5;border:3px solid #f1f4f5;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%; max-width: 580px;">
+            <table align="center" cellspacing="0" cellpadding="0" width="100%" style="margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%; max-width: 600px;">
                     <tr style="padding:0;text-align:left;vertical-align:top">
                       <td style="margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                        <div id="destination" style="border: 1px solid lightgray; border-radius: 15px">
+                        <div id="destination" style="background-color:#f0f4f5; border-radius: 15px; box-sizing: border-box;">
 
                           <div data-module="text_item" class="item">
                             <div data-initial="false" class="item_element" style="position: relative;">
@@ -322,12 +327,13 @@
                             </div>
                           </div>
                           <div data-module="image_item" class="item">
-                            <div data-initial="false" class="item_element">
+                            <div data-initial="false" class="item_element" style="position: relative;">
 
-                              <div class="hoverable" style="text-align: center; max-width: 600px; " data-align="center" data-size="fit">
-                                <a target="_blank" style="text-decoration: none; " class="anchorimg" href="http://">
-                                  <img class="anchorimg" src="../../images/imageicon.png" data-from="one">
-                                  <div class="anchorimg" >Click here to add image</div>
+                              <div class="hoverable" style="text-align: center;" data-align="center" data-size="fit">
+                                <a style="text-decoration: none;" class="anchorimg" href="http://" disabled='disabled'>
+                                  <img style="vertical-align: bottom;" src="../../images/imageicon.png" data-from="one">
+                                  <br />
+                                  <span>Click here to add image</span>
                                 </a>
                               </div>
 
@@ -366,7 +372,7 @@
 
   <!-- Modal -->
   <div class="modal fade right" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-dialog modal-full-height modal-right modal-notify modal-info"   style="margin-top:0;" role="document">
       <!--Content-->
       <div class="modal-content" >
         <!--Header-->
@@ -374,28 +380,26 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title w-100" id="myModalLabel">Editing Section</h4>
+          <h4 class="modal-title w-100 heading lead" id="myModalLabel">Editing Section</h4>
         </div>
         <!--Body-->
-        <div class="modal-body" >
+        <div class="modal-body" style="overflow-y: scroll; overflow-x: visible;" >
           <div class="editing_area">
             <div *ngIf="initialText">
               <div>Click on any content holder to edit its settings.</div>
               <div> Send a test email or close</div>
             </div>
             <div *ngIf="showtext">
-              <div>
-                <div>Color Settings</div>
-                <div>
-                  <div><input [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                  <div><input [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
-                  <div><input [colorPicker]="linkcolor" (colorPickerChange)="LinkColorChange($event)" [style.background]="linkcolor" (click)="ColorPickerDisplay($event)" /><span>Link Color</span></div>
-
-
+              <div class="card">
+                <div class="card-header primary-color white-text">Color Settings</div>
+                <div class="card-block">
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="linkcolor" (colorPickerChange)="LinkColorChange($event)" [style.background]="linkcolor" (click)="ColorPickerDisplay($event)" /><span>Link Color</span></div>
                 </div>
               </div>
-              <div>
-                <div>
+              <div class="card">
+                <div class="card-header primary-color white-text">
                   Text Settings
                 </div>
                 <!--<ckeditor [(ngModel)]="content" debounce="0" (ngModelChange)="ModelChange($event)" (ready)="onReadyEditor($event)">-->
@@ -406,29 +410,34 @@
 
                 <!--</trumbowyg>-->
 
-                  <div  [froalaEditor]="options" [(froalaModel)]="content" (froalaModelChange)="ModelChange($event)"></div>
+                  <div class="card-block" [froalaEditor]="options" [(froalaModel)]="content" (froalaModelChange)="ModelChange($event)"></div>
 
               </div>
             </div>
             <div *ngIf="showimage">
 
-
-              <div>
-                <div>
-                  Image
+              <div class="card">
+                <div class="card-header primary-color white-text">Color Settings</div>
+                <div class="card-block">
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
                 </div>
-                <div id="preview_image">
-                  <div class="text-center" style="width: 100%; height: 100%; max-width: 300px; max-height: 200px;">
-                    <img src="../../images/imageicon.png">
+              </div>
+              <div class="card">
+                <div class="card-header primary-color white-text">
+                  Image Settings
+                </div>
+                <div class="card-block" id="preview_image">
+                  <div style="max-width: 300px; max-height: 200px;">
+                    <img style="max-width: 100%; margin: 0 auto;" src="../../images/imageicon.png">
                   </div>
-                  <div><button class="btn btn-secondary" (click)="BrowseImage()">Browse Image</button></div>
+                  <div class="text-center"><button class="btn btn-secondary btn-sm" (click)="BrowseImage()">Browse Image</button></div>
                   <div id="imgAnchor">
                     <label >Image Link:</label>
                     <input type="text" class="form-control mt-0 py-0" [(ngModel)]="Anchorimg" (ngModelChange)="onImgAnchorChange('null',$event)">
                   </div>
                   <div id="selimgpos">
                     <label>Image Position:</label>
-                    <select class=" form-control" [(ngModel)]="selimgpos" (ngModelChange)="onImgPosChange('null',$event)">
+                    <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgpos" (ngModelChange)="onImgPosChange('null',$event)">
                       <option value="left" [selected]="selimgpos == 'left'">Left</option>
                       <option value="center" [selected]="selimgpos == 'center'">Center</option>
                       <option value="right" [selected]="selimgpos == 'right'">Right</option>
@@ -436,7 +445,7 @@
                   </div>
                   <div id="selimgsize">
                     <label>Image Size:</label>
-                    <select class=" form-control" [(ngModel)]="selimgsize" (ngModelChange)="onImgSizeChange('null',$event)">
+                    <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgsize" (ngModelChange)="onImgSizeChange('null',$event)">
                       <option value="fit" [selected]="selimgsize == 'fit'">Fit To Box</option>
                       <option value="90%" [selected]="selimgsize == '90%'">90%</option>
                       <option value="80%" [selected]="selimgsize == '80%'">80%</option>
@@ -454,12 +463,7 @@
                 </div>
 
               </div>
-              <div>
-                <div>Color Settings</div>
-                <div>
-                  <div><input [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                </div>
-              </div>
+
 
 
 
@@ -472,65 +476,74 @@
 
             </div>
             <div *ngIf="showbutton">
-              <div>
-                <div>Button Settings</div>
-                <div>
-                  <label>Button Text:</label>
-                  <input type="text" class="form-control my-0 py-0" [(ngModel)]="buttontext" (ngModelChange)="onBtnTextChange($event)">
-                </div>
-                <div id="selimgsize">
-                  <label>Link To :</label>
-                  <select class=" form-control" [(ngModel)]="linkTo" (ngModelChange)="onLinkChange($event)">
-                    <option value="web" [selected]="linkTo == 'web'">Web Address</option>
-                    <option value="email" [selected]="linkTo == 'email'">Email Address</option>
-                  </select>
-                </div>
-                <div *ngIf="linkTo == 'web'">
-                  <label >Web Address (URL):</label>
-                  <input type="text" class="form-control my-0 py-0" [(ngModel)]="webAdd" (ngModelChange)="onWebAddChange($event)">
-                </div>
-                <div *ngIf="linkTo == 'email'">
-                  <label >Email Address:</label>
-                  <input type="email" class="form-control my-0 py-0" [(ngModel)]="emailAdd" (ngModelChange)="onEmailAddChange($event)">
-                </div>
-                <div class="my-0" *ngIf="linkTo == 'email'">
-                  <label>Message Subject:</label>
-                  <input type="text" class="form-control my-0 py-0" [(ngModel)]="emailSub" (ngModelChange)="onMsgSubChange($event)">
-                </div>
-                <div class="my-0" *ngIf="linkTo == 'email'">
-                  <label>Message Body:</label>
-                  <input type="text" class="form-control my-0 py-0" [(ngModel)]="emailBody" (ngModelChange)="onMsgBodyChange($event)">
+              <div class="card">
+                <div class="card-header primary-color white-text">Color Settings</div>
+                <div class="card-block">
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="textcolor" (colorPickerChange)="BtnTextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Button Text Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="btnbackgroundcolor" (colorPickerChange)="BtnBgColorChange($event)" [style.background]="btnbackgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Button Background Color</span></div>
+
                 </div>
               </div>
-              <div>
-                <div>Color Settings</div>
-                <div>
-                  <div><input style="width: 50px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                  <div><input style="width: 50px;" [colorPicker]="textcolor" (colorPickerChange)="BtnTextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Button Text Color</span></div>
-                  <div><input style="width: 50px;" [colorPicker]="btnbackgroundcolor" (colorPickerChange)="BtnBgColorChange($event)" [style.background]="btnbackgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Button Background Color</span></div>
-
-
+              <div class="card">
+                <div class="card-header primary-color white-text">Button Settings</div>
+                <div class="card-block">
+                  <div>
+                    <label>Button Text:</label>
+                    <input type="text" class="form-control my-0 py-0" [(ngModel)]="buttontext" (ngModelChange)="onBtnTextChange($event)">
+                  </div>
+                  <div id="selimgsize">
+                    <label>Link To :</label>
+                    <select select class="mdb-select app-select-dropdown" [(ngModel)]="linkTo" (ngModelChange)="onLinkChange($event)">
+                      <option value="web" [selected]="linkTo == 'web'">Web Address</option>
+                      <option value="email" [selected]="linkTo == 'email'">Email Address</option>
+                    </select>
+                  </div>
+                  <div *ngIf="linkTo == 'web'">
+                    <label >Web Address (URL):</label>
+                    <input type="text" class="form-control my-0 py-0" [(ngModel)]="webAdd" (ngModelChange)="onWebAddChange($event)">
+                  </div>
+                  <div *ngIf="linkTo == 'email'">
+                    <label >Email Address:</label>
+                    <input type="email" class="form-control my-0 py-0" [(ngModel)]="emailAdd" (ngModelChange)="onEmailAddChange($event)">
+                  </div>
+                  <div class="my-0" *ngIf="linkTo == 'email'">
+                    <label>Message Subject:</label>
+                    <input type="text" class="form-control my-0 py-0" [(ngModel)]="emailSub" (ngModelChange)="onMsgSubChange($event)">
+                  </div>
+                  <div class="my-0" *ngIf="linkTo == 'email'">
+                    <label>Message Body:</label>
+                    <input type="text" class="form-control my-0 py-0" [(ngModel)]="emailBody" (ngModelChange)="onMsgBodyChange($event)">
+                  </div>
                 </div>
               </div>
 
             </div>
             <div *ngIf="showimagetext" >
-              <div>
-                <div>
-                  Image
+              <div class="card">
+                <div class="card-header primary-color white-text">Color Settings</div>
+                <div class="card-block">
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="linkcolor" (colorPickerChange)="LinkColorChange($event)" [style.background]="linkcolor" (click)="ColorPickerDisplay($event)" /><span>Link Color</span></div>
                 </div>
-                <div id="preview_image_text" class="row mx-1">
+              </div>
+              <div class="card">
+                <div class="card-header primary-color white-text">
+                  Image Settings
+                </div>
+                <div id="preview_image_text" class="card-block">
 
-                  <div class="col-xs-8" style="display: inline">
-                    <div class="text-center">
-                      <img src="../../images/imageicon.png">
+                  <div>
+                    <div style="max-width: 300px; max-height: 200px;">
+                      <img style="max-width: 100%; margin: 0 auto;" src="../../images/imageicon.png">
                     </div>
-                    <div><button class="btn btn-secondary" (click)="BrowseImage()">Browse Image</button></div>
+                    <div class="text-center"><button class="btn btn-secondary btn-sm" (click)="BrowseImage()">Browse Image</button></div>
                   </div>
-                  <div class="col-xs-4 ml-3" style="display: inline">
+                  <div>
                     <div class="my-0" id="selimgpos" >
                       <label class="my-0">Image Position:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgpos" (ngModelChange)="onImgPosChange('null',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgpos" (ngModelChange)="onImgPosChange('null',$event)">
                         <option value="left" [selected]="selimgpos == 'left'">Left</option>
                         <option value="center" [selected]="selimgpos == 'center'">Center</option>
                         <option value="right" [selected]="selimgpos == 'right'">Right</option>
@@ -538,7 +551,7 @@
                     </div>
                     <div class="my-0" id="selimgsize" >
                       <label class="my-0">Image Size:</label>
-                      <select class="form-control form-control-sm py-0 my-0" [(ngModel)]="selimgsize" (ngModelChange)="onImgSizeChange('null',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgsize" (ngModelChange)="onImgSizeChange('null',$event)">
                         <option value="fit" [selected]="selimgsize == 'fit'">Fit To Box</option>
                         <option value="90%" [selected]="selimgsize == '90%'">90%</option>
                         <option value="80%" [selected]="selimgsize == '80%'">80%</option>
@@ -554,7 +567,7 @@
                     </div>
                     <div class="my-0" id="selimgboxsize" >
                       <label class="my-0">Image Size:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgboxsize" (ngModelChange)="onImgBoxSizeChange('null',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgboxsize" (ngModelChange)="onImgBoxSizeChange('null',$event)">
                         <option value="25" [selected]="selimgboxsize == '25'">25-75</option>
                         <option value="50" [selected]="selimgboxsize == '50'">50-50</option>
                         <option value="75" [selected]="selimgboxsize == '75'">75-25</option>
@@ -564,25 +577,16 @@
                 </div>
 
               </div>
-              <div>
-                <div>Color Settings</div>
-                <div>
-                  <div class="my-0" style="font-size: smaller"><input  [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                  <div class="my-0" style="font-size: smaller"><input  [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
-                  <div class="my-0" style="font-size: smaller"><input  [colorPicker]="linkcolor" (colorPickerChange)="LinkColorChange($event)" [style.background]="linkcolor" (click)="ColorPickerDisplay($event)" /><span>Link Color</span></div>
-                </div>
-              </div>
-              <div>
-                <div>
+              <div class="card">
+                <div class="card-header primary-color white-text">
                   Text Settings
                 </div>
-                <div>
+
                 <!--<div style="height: 150px; overflow-y: scroll">-->
                   <!--<ckeditor  [(ngModel)]="content" debounce="0" (ngModelChange)="ModelChange($event)" (ready)="onReadyEditor($event)">-->
                   <!--</ckeditor>-->
-                  <div  [froalaEditor]="options" [(froalaModel)]="content" (froalaModelChange)="ModelChange($event)"></div>
+                  <div class="card-block" [froalaEditor]="options" [(froalaModel)]="content" (froalaModelChange)="ModelChange($event)"></div>
 
-                </div>
 
 
 
@@ -590,22 +594,27 @@
             </div>
             <div *ngIf="showimageimage">
 
-
-              <div>
-                <div>
-                  Image
+              <div class="card">
+                <div class="card-header primary-color white-text">Color Settings</div>
+                <div class="card-block">
+                  <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
                 </div>
-                <div id="preview_image_left" class=" row mx-1">
-                  <div class="col-xs-8" style="display: inline">
-                    <div class="text-center">
-                      <img src="../../images/imageicon.png">
+              </div>
+              <div class="card">
+                <div class="card-header primary-color white-text">
+                  Left Image Settings
+                </div>
+                <div id="preview_image_left" class="card-block">
+                  <div>
+                    <div style="max-width: 300px; max-height: 200px;">
+                      <img style="max-width: 100%; margin: 0 auto;" src="../../images/imageicon.png">
                     </div>
-                    <div><button class="btn btn-primary" (click)="ImageModalTrigger('left',$event)">Browse Image</button></div>
+                    <div class="text-center"><button class="btn btn-secondary btn-sm" (click)="ImageModalTrigger('left',$event)">Browse Image</button></div>
                   </div >
-                  <div class="col-xs-4 ml-3" style="display: inline">
+                  <div>
                     <div class="my-0" id="selimgposleft">
                       <label class="my-0">Image Position:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgposleft" (ngModelChange)="onImgPosChange('left',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgposleft" (ngModelChange)="onImgPosChange('left',$event)">
                         <option value="left" [selected]="selimgposleft == 'left'">Left</option>
                         <option value="center" [selected]="selimgposleft == 'center'">Center</option>
                         <option value="right" [selected]="selimgposleft == 'right'">Right</option>
@@ -613,7 +622,7 @@
                     </div>
                     <div class="my-0" id="selimgsizeleft">
                       <label class="my-0">Image Size:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgsizeleft" (ngModelChange)="onImgSizeChange('left',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgsizeleft" (ngModelChange)="onImgSizeChange('left',$event)">
                         <option value="fit" [selected]="selimgsizeleft == 'fit'">Fit To Box</option>
                         <option value="90%" [selected]="selimgsize == '90%'">90%</option>
                         <option value="80%" [selected]="selimgsize == '80%'">80%</option>
@@ -629,7 +638,7 @@
                     </div>
                     <div class="my-0" id="selimgboxsizeleft">
                       <label class="my-0">Image Size:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgboxsizeleft" (ngModelChange)="onImgBoxSizeChange('left',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgboxsizeleft" (ngModelChange)="onImgBoxSizeChange('left',$event)">
                         <option value="25" [selected]="selimgboxsizeleft == '25'">25-75</option>
                         <option value="50" [selected]="selimgboxsizeleft == '50'">50-50</option>
                         <option value="75" [selected]="selimgboxsizeleft == '75'">75-25</option>
@@ -639,21 +648,21 @@
                 </div>
 
               </div>
-              <div>
-                <div>
-                  Image
+              <div class="card">
+                <div class="card-header primary-color white-text">
+                  Right Image Settings
                 </div>
-                <div id="preview_image_right" class="row mx-1">
-                  <div class="col-xs-8" style="display: inline">
-                    <div class="text-center">
-                      <img src="../../images/imageicon.png">
+                <div id="preview_image_right" class="card-block">
+                  <div>
+                    <div style="max-width: 300px; max-height: 200px;">
+                      <img style="max-width: 100%; margin: 0 auto;" src="../../images/imageicon.png">
                     </div>
-                    <div><button class="btn btn-primary" (click)="ImageModalTrigger('right',$event)">Browse Image</button></div>
+                    <div class="text-center"><button class="btn btn-secondary btn-sm" (click)="ImageModalTrigger('right',$event)">Browse Image</button></div>
                   </div>
-                  <div class="col-xs-4 ml-3" style="display: inline" >
+                  <div>
                     <div class="my-0" id="selimgposright">
                       <label class="my-0">Image Position:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgposright" (ngModelChange)="onImgPosChange('right',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgposright" (ngModelChange)="onImgPosChange('right',$event)">
                         <option value="left" [selected]="selimgposright == 'left'">Left</option>
                         <option value="center" [selected]="selimgposright == 'center'">Center</option>
                         <option value="right" [selected]="selimgposright == 'right'">Right</option>
@@ -661,7 +670,7 @@
                     </div>
                     <div class="my-0" id="selimgsizeright">
                       <label class="my-0">Image Size:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgsizeright" (ngModelChange)="onImgSizeChange('right',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgsizeright" (ngModelChange)="onImgSizeChange('right',$event)">
                         <option value="fit" [selected]="selimgsizeright == 'fit'">Fit To Box</option>
                         <option value="90%" [selected]="selimgsize == '90%'">90%</option>
                         <option value="80%" [selected]="selimgsize == '80%'">80%</option>
@@ -677,7 +686,7 @@
                     </div>
                     <div  class="my-0" id="selimgboxsizeright">
                       <label class="my-0">Image Size:</label>
-                      <select class=" form-control form-control-sm py-0 my-0" [(ngModel)]="selimgboxsizeright" (ngModelChange)="onImgBoxSizeChange('right',$event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="selimgboxsizeright" (ngModelChange)="onImgBoxSizeChange('right',$event)">
                         <option value="25" [selected]="selimgboxsizeright == '25'">25-75</option>
                         <option value="50" [selected]="selimgboxsizeright == '50'">50-50</option>
                         <option value="75" [selected]="selimgboxsizeright == '75'">75-25</option>
@@ -687,12 +696,7 @@
                 </div>
 
               </div>
-              <div>
-                <div>Color Settings</div>
-                <div>
-                  <div><input [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                </div>
-              </div>
+
 
             </div>
             <div *ngIf="showdiscountcoupon">
@@ -701,56 +705,59 @@
                 <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CouponModal">Attach</button><button class="btn btn-info" (click)="createDiscountCoupon()">Create New</button></div>
               </div>
               <div *ngIf="discountEdit">
-                <div style="text-align: center; ">
-                  <div class="loader"></div>
-                  <div class="owl-carousel owl-theme" style="float: left;width: 50%; overflow-y: hidden; max-height: 200px;" >
-                    <div id="itemforclone" class="item" style="width:100px; height: 150px ; margin: 0 auto;">
-                      <img src="../../images/Discount/Discounts1.png" style="height: 100%;">
-                    </div>
-                    <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
-                      <img src="../../images/Discount/Discounts2.png" style="height: 100%;">
-                    </div>
-                    <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
-                      <img src="../../images/Discount/Discounts3.png" style="height: 100%;">
-                    </div>
-                    <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
-                      <img src="../../images/Discount/Discounts4.png" style="height: 100%;">
-                    </div>
+                <div  class="card">
+                  <div class="card-header primary-color white-text">
+                    Image Settings
                   </div>
-                  <div style="float: left;width: 50%;">
-                    <div>Discount Coupon</div>
-                    <button class="btn  btn-sm btn-primary" style="width: 60px; padding: 8px 5px"  data-toggle="modal" data-target="#CouponModal">Change</button>
-                    <button class="btn btn-sm btn-info" style="width: 60px; padding: 8px 5px" (click)="createDiscountCoupon()">Create</button>
-                    <div style="margin-top: 8px;">
-                      <label for="customImageUrl" style="margin-bottom: 0; padding-bottom: 0; ">Custom Image Url</label>
-                      <input type="text" id="customImageUrl" [(ngModel)]="customDiscountImgURL" class="form-control" style="padding-top: 0; margin-top: 0;">
-                      <button id="customImageUrlAddBtn" class="btn btn-success btn-sm" (click)="OnCustomDiscountImgAdd()">Add</button>
+                  <div style="text-align: center; " class="card-block">
+                    <div class="owl-carousel owl-theme" style="float: left;width: 50%; overflow-y: hidden; max-height: 200px;" >
+                      <div id="itemforclone" class="item" style="width:100px; height: 150px ; margin: 0 auto;">
+                        <img src="../../images/Discount/Discounts1.png" style="height: 100%;">
+                      </div>
+                      <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
+                        <img src="../../images/Discount/Discounts2.png" style="height: 100%;">
+                      </div>
+                      <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
+                        <img src="../../images/Discount/Discounts3.png" style="height: 100%;">
+                      </div>
+                      <div class="item" style="width:100px; height: 150px; margin: 0 auto;">
+                        <img src="../../images/Discount/Discounts4.png" style="height: 100%;">
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div style="margin-top: 8px; display: block; float: left;">
-
-                  <div>
-                    <div >Color Settings</div>
-                    <div><input style="width: 50px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
-                    <div><input style="width: 50px;" [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
-                    <div><input style="width: 50px;" [colorPicker]="btnbackgroundcolor" (colorPickerChange)="BtnBgColorChange($event)" [style.background]="btnbackgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Button Background Color</span></div>
-                    <div><input style="width: 50px;" [colorPicker]="btntextcolor" (colorPickerChange)="BtnTextColorChange($event)" [style.background]="btntextcolor" (click)="ColorPickerDisplay($event)" /><span>Button Text Color</span></div>
-
+                    <div style="float: left;width: 50%;">
+                      <div>Discount Coupon</div>
+                      <button class="btn  btn-sm btn-primary" style="width: 60px; padding: 8px 5px"  data-toggle="modal" data-target="#CouponModal">Change</button>
+                      <button class="btn btn-sm btn-info" style="width: 60px; padding: 8px 5px" (click)="createDiscountCoupon()">Create</button>
+                      <div style="margin-top: 8px;">
+                        <label for="customImageUrl" style="margin-bottom: 0; padding-bottom: 0; ">Custom Image Url</label>
+                        <input type="text" id="customImageUrl" [(ngModel)]="customDiscountImgURL" class="form-control" style="padding-top: 0; margin-top: 0;">
+                        <button id="customImageUrlAddBtn" class="btn btn-success btn-sm" (click)="OnCustomDiscountImgAdd()">Add</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div style="margin-top: 8px; display: block; float: left;">
-                  <div>Border Settings</div>
-                  <div>
+                <div class="card">
+
+                    <div class="card-header primary-color white-text">Color Settings</div>
+                    <div class="card-block">
+                      <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="backgroundcolor" (colorPickerChange)="BackgroundColorChange($event)" [style.background]="backgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Background Color</span></div>
+                      <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="textcolor" (colorPickerChange)="TextColorChange($event)" [style.background]="textcolor" (click)="ColorPickerDisplay($event)" /><span>Text Color</span></div>
+                      <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="btnbackgroundcolor" (colorPickerChange)="BtnBgColorChange($event)" [style.background]="btnbackgroundcolor" (click)="ColorPickerDisplay($event)" /><span>Button Background Color</span></div>
+                      <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="btntextcolor" (colorPickerChange)="BtnTextColorChange($event)" [style.background]="btntextcolor" (click)="ColorPickerDisplay($event)" /><span>Button Text Color</span></div>
+                    </div>
+                </div>
+                <div class="card">
+                  <div class="card-header primary-color white-text">Border Settings</div>
+                  <div class="card-block">
                     <div id="selimgborderstyle">
-                      <select class="form-control my-0" [(ngModel)]="borderstyle" (ngModelChange)="onBorderStyleChange($event)">
+                      <select select class="mdb-select app-select-dropdown" [(ngModel)]="borderstyle" (ngModelChange)="onBorderStyleChange($event)">
                         <option value="solid" [selected]="borderstyle == 'solid'">Solid</option>
                         <option value="dotted" [selected]="borderstyle == 'dotted'">Dotted</option>
                         <option value="dashed" [selected]="borderstyle == 'dashed'">Dashed</option>
                       </select>
                     </div>
                     <div><input style="margin-bottom: 3px; margin-top: 0; width: 90%;" type="number" [(ngModel)]="borderwidth" (ngModelChange)="onBorderWidthChange($event)" ><span>px</span></div>
-                    <div><input class="my-0" style="width: 30px;" [colorPicker]="bordercolor" (colorPickerChange)="onBorderColorChange($event)" [style.background]="bordercolor" (click)="ColorPickerDisplay($event)" /><span>Border Color</span></div>
+                    <div><input class="my-0 mr-1" style="width: 30px;" [colorPicker]="bordercolor" (colorPickerChange)="onBorderColorChange($event)" [style.background]="bordercolor" (click)="ColorPickerDisplay($event)" /><span>Border Color</span></div>
                   </div>
                 </div>
 
@@ -773,20 +780,20 @@
 
   <div class="hover-btn">
 
-    <div class="move-icon">
-      <div ><i class="icon-cross " id="moveitem" aria-hidden="true"></i></div>
+    <div class="move-icon" style="position : relative; left:5px;">
+      <div style="width: 25px;" ><i class="icon-move " id="moveitem" aria-hidden="true" ></i></div>
       <span class="tooltiptext1">Move</span>
     </div>
 
     <div class="remove-icon">
-      <div ><i class="icon-cross " id="removeitem" aria-hidden="true"></i></div>
+      <div style="width: 25px;"><i class="icon-cross " id="removeitem" aria-hidden="true" ></i></div>
       <span class="tooltiptext3">Remove</span>
     </div>
   </div>
 
   <!-- Modal -->
   <div class="modal fade top" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog " role="document">
+    <div class="modal-dialog " style="-webkit-transform: translate(0,0); -ms-transform: translate(0,0);transform: translate(0,0);" role="document">
 
 
 
@@ -817,7 +824,7 @@
               <br>
               <div class="form-group">
                 <label for="category">Select Category</label>
-                <select class="form-control" id="category"  [(ngModel)]="category" name="category" (change)="SelectCategory($event)">
+                <select select class="mdb-select app-select-dropdown"  id="category"  [(ngModel)]="category" name="category" (change)="SelectCategory($event)">
                   <option [value]="1">Anniversary</option>
                   <option [value]="2">Christmas</option>
                   <option [value]="3">Birthday</option>
@@ -910,7 +917,7 @@
 </div>
 
 <div class="modal fade top" id="CouponModal" tabindex="-1" role="dialog" aria-labelledby="CouponModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" style="-webkit-transform: translate(0,0); -ms-transform: translate(0,0);transform: translate(0,0);" role="document">
 
 
 

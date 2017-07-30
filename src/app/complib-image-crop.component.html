@@ -1,0 +1,31 @@
+﻿<div bsModal #imageUploadModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right" (click)="hideModal()" aria-label="Close">
+                    <span class="icon icon-cross"></span>
+                </button>
+                <h4 class="modal-title pull-left">Image Upload</h4><p></p>
+
+                
+            </div>
+            <div class="modal-body text-xs-center">
+
+                <img-cropper [image]="data1"  [settings]="cropperSettings1"  (onCrop)="cropped($event)"></img-cropper>
+                
+                <p *ngIf="data1.image" class="m-0"><a class="text-blue-2" (click)="triggerInput()">Click here</a> to select different image</p>
+
+                <div class="col-xs text-xs-center mt-1">
+                    <p>*Allowed image formats: jpeg|png|gif &nbsp;(Max-size:2Mb)</p>
+                </div>
+                <div class="col-xs text-xs-center mt-1" *ngIf="data1.image">
+                    <button class="btn btn-sm blue-2 mr-1 waves-effect waves-light" style="z-index: 0" (click)="getImg()">Upload
+                    </button>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

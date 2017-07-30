@@ -30,6 +30,9 @@
             'ng2-lazy-trumbowyg':'npm:ng2-lazy-trumbowyg/bundles/trumbowyg.umd.js',
             'angular-froala-wysiwyg': 'npm:angular-froala-wysiwyg/bundles/angular-froala-wysiwyg.umd.js',
             'ng2-page-slider':'npm:ng2-page-slider/bundles/ng2-page-slider.umd.js',
+            'moment': 'node_modules/moment/moment.js',
+            'ng2-img-cropper' :  'ng2-img-cropper',
+            'ngx-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
             // other libraries
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
@@ -51,7 +54,8 @@
             rxjs: {
                 defaultExtension: 'js'
             },
-            'angular2-color-picker': { main: 'index.js', defaultExtension: 'js' }
+            'angular2-color-picker': { main: 'index.js', defaultExtension: 'js' },
+          'ng2-img-cropper' :           { main: 'index.js', defaultExtension: 'js' }
         }
     });
 })(this);
