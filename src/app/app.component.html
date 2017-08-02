@@ -1,4 +1,4 @@
 <!--<div>Hello from App</div>-->
 <!--<button class="btn btn-primary btn-sm" (click)="LoadEmailTemplateLoad()">Click for Input</button>-->
-<email-template  [NewCouponCreated]="createdCoupon" [DiscountArray]="DiscountArray" [DiscountSelectedId]="DiscountCouponId" (DiscountCouponCreate)="createCoupon()" (TemplateSave)="onTemplateSave($event)" (TemplateWithEmail)="onTemplateWithEmail($event)"></email-template>
+<app-design-email-template [TemplateID]="TemplateID" [TemplateEmail]="emailTemplateString" [NewCouponCreated]="createdCoupon" [DiscountSelectedId]="DiscountCouponId" (DiscountCouponCreate)="createCoupon()" (TemplateSave)="onTemplateSave($event)" (TemplateWithEmail)="onTemplateWithEmail($event)"></app-design-email-template>
 <!--[TemplateEmail]="emailTemplateString"-->

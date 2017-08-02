@@ -1,0 +1,38 @@
+<div class="modal fade top" id="CouponModal" tabindex="-1" role="dialog" aria-labelledby="CouponModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="-webkit-transform: translate(0,0); -ms-transform: translate(0,0);transform: translate(0,0);" role="document">
+
+
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Discount Coupon List</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul>
+                    <li *ngFor="let discountCoupon of _discountCouponList" class="card" style="padding: 5px 5px">
+                        <div>
+                            <span style="background-color: lightblue; border-radius: 5%; border: 1px solid lightgray; padding: 2px 5px ">Discount Coupon</span>
+                            <span>Code : <b>{{discountCoupon.code}}</b></span>
+                        </div>
+                        <div style="font-weight: bolder;">{{discountCoupon.title}}</div>
+                        <div>$10 discount on Any Service by Any Staff</div>
+                        <div>
+                            <div style="display: inline; font-size: small;">{{discountCoupon.createdDifference}}</div>
+                            <div style="display: inline;">
+                                <button class="btn btn-primary btn-sm" (click)="onPreviewClick()">Preview This Deal</button>
+                                <button class="btn btn-secondary btn-sm" (click)="onAttachCoupon(discountCoupon)">Attach it</button>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
